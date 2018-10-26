@@ -1,4 +1,4 @@
-{% set version = "2.13.02" %}
+{% set version = "2.13.03" %}
 
 package:
   name: nasm
@@ -6,17 +6,21 @@ package:
 
 source:
   fn: nasm-{{ version }}.tar.gz
-  url: http://www.nasm.us/pub/nasm/releasebuilds/{{ version }}/nasm-{{ version }}.tar.gz
-  sha256: 4749fd76a8a26dc7d8871bc97cc2c16cfa0c933f984a13128e94f464f417531a
+  url: http://www.nasm.us/pub/nasm/releasebuilds/{{ version }}/nasm-{{ version }}.tar.xz
+  sha256: 812ecfb0dcbc5bd409aaa8f61c7de94c5b8752a7b00c632883d15b2ed6452573
 
 build:
-  number: 1001
+  number: 1
   skip: true  # [win and vc<14]
+  ignore_run_exports:
+    - vc
 
 requirements:
   build:
     - {{ compiler('c') }}
   host:
+  run:
+    - vs2015_runtime   # [win]
 
 test:
   commands:
