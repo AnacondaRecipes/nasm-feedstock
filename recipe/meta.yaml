@@ -5,7 +5,7 @@ package:
   version: {{ version }}
 
 source:
-  url: http://www.nasm.us/pub/nasm/releasebuilds/{{ version }}/nasm-{{ version }}.tar.xz
+  url: https://www.nasm.us/pub/nasm/releasebuilds/{{ version }}/nasm-{{ version }}.tar.xz
   sha256: e24ade3e928f7253aa8c14aa44726d1edf3f98643f87c9d72ec1df44b26be8f5
 
 build:
@@ -33,10 +33,16 @@ test:
     - ndisasm -h
 
 about:
-  home: http://www.nasm.us
-  license: BSD 2-Clause
+  home: https://www.nasm.us
+  license: BSD-2-Clause
+  license_family: BSD
   license_file: LICENSE
+  doc_url: https://www.nasm.us/docs.php
+  dev_url: https://github.com/netwide-assembler/nasm
   summary: "Netwide Assembler: an assembler targetting the Intel x86 series of processors."
+  description: |
+    Asssembler for the x86 CPU architecture portable to nearly every modern platform, 
+    and with code generation for many platforms old and new.
 
 extra:
   recipe-maintainers:
