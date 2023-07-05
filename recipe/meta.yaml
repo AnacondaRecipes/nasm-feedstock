@@ -10,7 +10,6 @@ source:
 
 build:
   number: 0
-  # skip: true  # [not (x86_64)]
   ignore_run_exports:
     - vc
 
