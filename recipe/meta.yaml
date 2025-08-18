@@ -11,6 +11,8 @@ source:
 
 build:
   number: 0
+  ignore_run_exports:
+    - vc
 
 requirements:
   build:
@@ -19,6 +21,9 @@ requirements:
     - gnuconfig  # [unix]
     - make  # [unix]
     - perl  # [win]
+  run:
+    # Since there are no shared libraries, we just need to ensure the right runtime.
+    - vs2015_runtime  # [win]
 
 test:
   commands:
