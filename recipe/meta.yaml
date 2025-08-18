@@ -23,6 +23,7 @@ requirements:
 test:
   commands:
     - nasm -h
+    - nasm -version
     - ndisasm -h
 
 about:
