@@ -21,9 +21,6 @@ requirements:
     - gnuconfig  # [unix]
     - make  # [unix]
     - perl  # [win]
-  run:
-    # Since there are no shared libraries, we just need to ensure the right runtime.
-    - vs2015_runtime  # [win]
 
 test:
   commands:
